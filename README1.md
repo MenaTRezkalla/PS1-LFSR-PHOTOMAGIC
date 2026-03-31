@@ -13,12 +13,33 @@ The project implements and tests a data type that simulates the operation of a 1
 ### Features
 I used an unsigned integer to represent my 16-bit register, and used an integer to store its size. It allows me to easily shift the bits and insert new ones, as well as quickly see where the bits are at the three taps.
 
-#### Part a
+#### Part a and b
 I used an unsigned integer to represent my 16-bit register for the LFSR class, and used an integer to store its size. It allows me to easily shift the bits and insert new ones, as well as quickly see where the bits are at the three taps.
 
 Nothing was really changed when going from part A to part B. I used the LFSR from part A to implement a function for b.
 
-#### Part b
+### How to Run
+
+1. Open a Linux terminal
+2. Navigate to the project folder
+3. Compile the program:
+
+   ```bash
+   make
+   ```
+4. Run it:
+
+   ```bash
+   ./Photomagic input.png output.png {bit string of '1's and '0's that is 16 bits long, or a string of exactly two characters}
+   ```
+You can replace the input and output png with any png of your choice. In order to encrypt and decrypt an image, you need to use the same password when encrypting and decrypting.
+
+## Requirements
+
+* Linux
+* `make`
+* C++ compiler and SFML
+
 
 ### Issues
 I didn't come across any issues while testing. However, I didn't know if the program had to throw an exception if the string wasn't 16 bits long. As it is currently, my program is designed throw an exception if the length isn't exactly 16 bits long. Further in this document, you will see that I did the password extra credit, but since a string of two characters is 16 bits, the program will only work with password strings of 2. This is intentional because of the information above.
